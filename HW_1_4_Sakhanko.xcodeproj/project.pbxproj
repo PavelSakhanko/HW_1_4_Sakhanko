@@ -33,6 +33,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B53B6E526354BEC00316A78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE7FE2261113BE00F075B5 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4B53B6E626354BF800316A78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B53B6E726354C4F00316A78 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE7FE4261113C000F075B5 /* Assets.xcassets */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		4B53B6E826354C7200316A78 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE7FE9261113C000F075B5 /* Info.plist */,
+				4BAE7FE0261113BE00F075B5 /* HW_1_4_SakhankoApp.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4B53B6EA26354D8300316A78 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4B53B6EB26354D9600316A78 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4BAE7FD4261113BE00F075B5 = {
 			isa = PBXGroup;
 			children = (
@@ -52,10 +98,12 @@
 		4BAE7FDF261113BE00F075B5 /* HW_1_4_Sakhanko */ = {
 			isa = PBXGroup;
 			children = (
-				4BAE7FE0261113BE00F075B5 /* HW_1_4_SakhankoApp.swift */,
-				4BAE7FE2261113BE00F075B5 /* ContentView.swift */,
-				4BAE7FE4261113C000F075B5 /* Assets.xcassets */,
-				4BAE7FE9261113C000F075B5 /* Info.plist */,
+				4B53B6E826354C7200316A78 /* Utilities */,
+				4B53B6E526354BEC00316A78 /* View */,
+				4B53B6E626354BF800316A78 /* Model */,
+				4B53B6E726354C4F00316A78 /* Support */,
+				4B53B6EA26354D8300316A78 /* Helpers */,
+				4B53B6EB26354D9600316A78 /* Extensions */,
 				4BAE7FE6261113C000F075B5 /* Preview Content */,
 			);
 			path = HW_1_4_Sakhanko;
@@ -271,7 +319,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HW_1_4_Sakhanko/Preview Content\"";
 				DEVELOPMENT_TEAM = 5NGK57BNWL;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = HW_1_4_Sakhanko/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HW_1_4_Sakhanko/Utilities/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,7 +341,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HW_1_4_Sakhanko/Preview Content\"";
 				DEVELOPMENT_TEAM = 5NGK57BNWL;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = HW_1_4_Sakhanko/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HW_1_4_Sakhanko/Utilities/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
