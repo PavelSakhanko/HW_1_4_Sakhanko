@@ -7,16 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B53B6EF26354EDB00316A78 /* SuffixViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53B6EE26354EDB00316A78 /* SuffixViewModel.swift */; };
+		4B53B6F426354F9A00316A78 /* Suffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53B6F326354F9A00316A78 /* Suffix.swift */; };
+		4B53B6FB263550A500316A78 /* StringSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53B6FA263550A500316A78 /* StringSequence.swift */; };
+		4B53B71626356CF000316A78 /* SuffixListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53B71526356CF000316A78 /* SuffixListView.swift */; };
+		4B53B71926356D3200316A78 /* CaseIterable+ordinal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53B71826356D3200316A78 /* CaseIterable+ordinal.swift */; };
+		4B53B71D26356FB200316A78 /* StringProtocol+split.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53B71C26356FB200316A78 /* StringProtocol+split.swift */; };
+		4B53B72526357EAC00316A78 /* StringIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53B72426357EAC00316A78 /* StringIterator.swift */; };
 		4BAE7FE1261113BE00F075B5 /* HW_1_4_SakhankoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE7FE0261113BE00F075B5 /* HW_1_4_SakhankoApp.swift */; };
-		4BAE7FE3261113BE00F075B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE7FE2261113BE00F075B5 /* ContentView.swift */; };
+		4BAE7FE3261113BE00F075B5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE7FE2261113BE00F075B5 /* MainView.swift */; };
 		4BAE7FE5261113C000F075B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BAE7FE4261113C000F075B5 /* Assets.xcassets */; };
 		4BAE7FE8261113C000F075B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BAE7FE7261113C000F075B5 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B53B6EE26354EDB00316A78 /* SuffixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixViewModel.swift; sourceTree = "<group>"; };
+		4B53B6F326354F9A00316A78 /* Suffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suffix.swift; sourceTree = "<group>"; };
+		4B53B6FA263550A500316A78 /* StringSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSequence.swift; sourceTree = "<group>"; };
+		4B53B71526356CF000316A78 /* SuffixListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixListView.swift; sourceTree = "<group>"; };
+		4B53B71826356D3200316A78 /* CaseIterable+ordinal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaseIterable+ordinal.swift"; sourceTree = "<group>"; };
+		4B53B71C26356FB200316A78 /* StringProtocol+split.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+split.swift"; sourceTree = "<group>"; };
+		4B53B72426357EAC00316A78 /* StringIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringIterator.swift; sourceTree = "<group>"; };
 		4BAE7FDD261113BE00F075B5 /* HW_1_4_Sakhanko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW_1_4_Sakhanko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BAE7FE0261113BE00F075B5 /* HW_1_4_SakhankoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW_1_4_SakhankoApp.swift; sourceTree = "<group>"; };
-		4BAE7FE2261113BE00F075B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4BAE7FE2261113BE00F075B5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4BAE7FE4261113C000F075B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BAE7FE7261113C000F075B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4BAE7FE9261113C000F075B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,7 +50,8 @@
 		4B53B6E526354BEC00316A78 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4BAE7FE2261113BE00F075B5 /* ContentView.swift */,
+				4BAE7FE2261113BE00F075B5 /* MainView.swift */,
+				4B53B71526356CF000316A78 /* SuffixListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -44,6 +59,9 @@
 		4B53B6E626354BF800316A78 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4B53B6F326354F9A00316A78 /* Suffix.swift */,
+				4B53B6FA263550A500316A78 /* StringSequence.swift */,
+				4B53B72426357EAC00316A78 /* StringIterator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -75,8 +93,18 @@
 		4B53B6EB26354D9600316A78 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4B53B71826356D3200316A78 /* CaseIterable+ordinal.swift */,
+				4B53B71C26356FB200316A78 /* StringProtocol+split.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4B53B6ED26354E8900316A78 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4B53B6EE26354EDB00316A78 /* SuffixViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4BAE7FD4261113BE00F075B5 = {
@@ -98,9 +126,10 @@
 		4BAE7FDF261113BE00F075B5 /* HW_1_4_Sakhanko */ = {
 			isa = PBXGroup;
 			children = (
-				4B53B6E826354C7200316A78 /* Utilities */,
-				4B53B6E526354BEC00316A78 /* View */,
 				4B53B6E626354BF800316A78 /* Model */,
+				4B53B6E526354BEC00316A78 /* View */,
+				4B53B6ED26354E8900316A78 /* ViewModel */,
+				4B53B6E826354C7200316A78 /* Utilities */,
 				4B53B6E726354C4F00316A78 /* Support */,
 				4B53B6EA26354D8300316A78 /* Helpers */,
 				4B53B6EB26354D9600316A78 /* Extensions */,
@@ -186,7 +215,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BAE7FE3261113BE00F075B5 /* ContentView.swift in Sources */,
+				4B53B6F426354F9A00316A78 /* Suffix.swift in Sources */,
+				4B53B6FB263550A500316A78 /* StringSequence.swift in Sources */,
+				4B53B71D26356FB200316A78 /* StringProtocol+split.swift in Sources */,
+				4BAE7FE3261113BE00F075B5 /* MainView.swift in Sources */,
+				4B53B72526357EAC00316A78 /* StringIterator.swift in Sources */,
+				4B53B71626356CF000316A78 /* SuffixListView.swift in Sources */,
+				4B53B71926356D3200316A78 /* CaseIterable+ordinal.swift in Sources */,
+				4B53B6EF26354EDB00316A78 /* SuffixViewModel.swift in Sources */,
 				4BAE7FE1261113BE00F075B5 /* HW_1_4_SakhankoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

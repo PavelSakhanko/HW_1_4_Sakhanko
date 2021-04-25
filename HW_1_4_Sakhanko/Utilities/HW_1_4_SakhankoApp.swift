@@ -11,7 +11,7 @@ import SwiftUI
 struct HW_1_4_SakhankoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
