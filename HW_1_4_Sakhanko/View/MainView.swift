@@ -24,13 +24,13 @@ struct MainView: View {
           TextField("Enter Search Text", text: $suffixViewModel.searchText)
               .padding(.horizontal, 40)
               .frame(width: UIScreen.main.bounds.width - 110, height: 45, alignment: .leading)
-              .background(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
+              .background(Color(UIColor(named: "searchFieldBG")!))
               .clipped()
               .cornerRadius(10)
               .overlay(
                   HStack {
                       Image(systemName: "magnifyingglass")
-                          .foregroundColor(.white)
+                          .foregroundColor(Color(UIColor(named: "cancelText")!))
                           .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                           .padding(.leading, 16)
                   }
@@ -42,7 +42,7 @@ struct MainView: View {
                   self.hideKeyboard()
               }) {
                   Text("Cancel")
-                    .foregroundColor(.white)
+                    .foregroundColor(Color(UIColor(named: "cancelText")!))
               }
               .padding(.trailing, 10)
               .transition(.move(edge: .trailing))
