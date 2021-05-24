@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B2C83AB265B827400141932 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C83AA265B827400141932 /* ShareViewController.swift */; };
+		4B2C83AE265B827400141932 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C83AC265B827400141932 /* MainInterface.storyboard */; };
+		4B2C83B2265B827400141932 /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4B2C83A8265B827400141932 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4B53B6EF26354EDB00316A78 /* SuffixViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53B6EE26354EDB00316A78 /* SuffixViewModel.swift */; };
 		4B53B6F426354F9A00316A78 /* Suffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53B6F326354F9A00316A78 /* Suffix.swift */; };
 		4B53B6FB263550A500316A78 /* StringSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53B6FA263550A500316A78 /* StringSequence.swift */; };
@@ -20,6 +23,16 @@
 		4BAE7FE8261113C000F075B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BAE7FE7261113C000F075B5 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4B2C83B0265B827400141932 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BAE7FD5261113BE00F075B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B2C83A7265B827400141932;
+			remoteInfo = ShareExtension;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		4BCE0FC42635AFAE00EDA3E7 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -27,6 +40,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				4B2C83B2265B827400141932 /* ShareExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,6 +48,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4B2C83A8265B827400141932 /* ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B2C83AA265B827400141932 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		4B2C83AD265B827400141932 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		4B2C83AF265B827400141932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B2C83B6265B846B00141932 /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
+		4B2C83B7265B87B800141932 /* HW_1_4_Sakhanko.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = HW_1_4_Sakhanko.entitlements; sourceTree = "<group>"; };
 		4B53B6EE26354EDB00316A78 /* SuffixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixViewModel.swift; sourceTree = "<group>"; };
 		4B53B6F326354F9A00316A78 /* Suffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suffix.swift; sourceTree = "<group>"; };
 		4B53B6FA263550A500316A78 /* StringSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSequence.swift; sourceTree = "<group>"; };
@@ -50,6 +70,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4B2C83A5265B827400141932 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4BAE7FDA261113BE00F075B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -66,6 +93,17 @@
 				4BAE7FE0261113BE00F075B5 /* HW_1_4_SakhankoApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		4B2C83A9265B827400141932 /* ShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				4B2C83B6265B846B00141932 /* ShareExtension.entitlements */,
+				4B2C83AA265B827400141932 /* ShareViewController.swift */,
+				4B2C83AC265B827400141932 /* MainInterface.storyboard */,
+				4B2C83AF265B827400141932 /* Info.plist */,
+			);
+			path = ShareExtension;
 			sourceTree = "<group>";
 		};
 		4B53B6E526354BEC00316A78 /* View */ = {
@@ -124,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				4BAE7FDF261113BE00F075B5 /* HW_1_4_Sakhanko */,
+				4B2C83A9265B827400141932 /* ShareExtension */,
 				4BAE7FDE261113BE00F075B5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -132,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				4BAE7FDD261113BE00F075B5 /* HW_1_4_Sakhanko.app */,
+				4B2C83A8265B827400141932 /* ShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +179,7 @@
 		4BAE7FDF261113BE00F075B5 /* HW_1_4_Sakhanko */ = {
 			isa = PBXGroup;
 			children = (
+				4B2C83B7265B87B800141932 /* HW_1_4_Sakhanko.entitlements */,
 				4B2C83A3265B6FFA00141932 /* App */,
 				4B53B6E626354BF800316A78 /* Model */,
 				4B53B6E526354BEC00316A78 /* View */,
@@ -162,6 +203,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4B2C83A7265B827400141932 /* ShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B2C83B3265B827500141932 /* Build configuration list for PBXNativeTarget "ShareExtension" */;
+			buildPhases = (
+				4B2C83A4265B827400141932 /* Sources */,
+				4B2C83A5265B827400141932 /* Frameworks */,
+				4B2C83A6265B827400141932 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShareExtension;
+			productName = ShareExtension;
+			productReference = 4B2C83A8265B827400141932 /* ShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		4BAE7FDC261113BE00F075B5 /* HW_1_4_Sakhanko */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BAE7FEC261113C000F075B5 /* Build configuration list for PBXNativeTarget "HW_1_4_Sakhanko" */;
@@ -174,6 +232,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4B2C83B1265B827400141932 /* PBXTargetDependency */,
 			);
 			name = HW_1_4_Sakhanko;
 			productName = HW_1_4_Sakhanko;
@@ -186,9 +245,12 @@
 		4BAE7FD5261113BE00F075B5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					4B2C83A7265B827400141932 = {
+						CreatedOnToolsVersion = 12.5;
+					};
 					4BAE7FDC261113BE00F075B5 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -208,11 +270,20 @@
 			projectRoot = "";
 			targets = (
 				4BAE7FDC261113BE00F075B5 /* HW_1_4_Sakhanko */,
+				4B2C83A7265B827400141932 /* ShareExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4B2C83A6265B827400141932 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B2C83AE265B827400141932 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4BAE7FDB261113BE00F075B5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,6 +296,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4B2C83A4265B827400141932 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B2C83AB265B827400141932 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4BAE7FD9261113BE00F075B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -243,7 +322,68 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4B2C83B1265B827400141932 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B2C83A7265B827400141932 /* ShareExtension */;
+			targetProxy = 4B2C83B0265B827400141932 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4B2C83AC265B827400141932 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B2C83AD265B827400141932 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		4B2C83B4265B827500141932 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5NGK57BNWL;
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SakhankoApps.HW-1-4-Sakhanko.ShareExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4B2C83B5265B827500141932 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5NGK57BNWL;
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SakhankoApps.HW-1-4-Sakhanko.ShareExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		4BAE7FEA261113C000F075B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -363,12 +503,13 @@
 		4BAE7FED261113C000F075B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HW_1_4_Sakhanko/HW_1_4_Sakhanko.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HW_1_4_Sakhanko/Preview Content\"";
-				DEVELOPMENT_TEAM = YN74M6VZR5;
+				DEVELOPMENT_TEAM = 5NGK57BNWL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/HW_1_4_Sakhanko/Utilities/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -386,12 +527,13 @@
 		4BAE7FEE261113C000F075B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HW_1_4_Sakhanko/HW_1_4_Sakhanko.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HW_1_4_Sakhanko/Preview Content\"";
-				DEVELOPMENT_TEAM = YN74M6VZR5;
+				DEVELOPMENT_TEAM = 5NGK57BNWL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/HW_1_4_Sakhanko/Utilities/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -409,6 +551,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4B2C83B3265B827500141932 /* Build configuration list for PBXNativeTarget "ShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B2C83B4265B827500141932 /* Debug */,
+				4B2C83B5265B827500141932 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4BAE7FD8261113BE00F075B5 /* Build configuration list for PBXProject "HW_1_4_Sakhanko" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

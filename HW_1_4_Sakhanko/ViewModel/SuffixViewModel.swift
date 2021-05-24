@@ -8,23 +8,38 @@
 import Foundation
 
 class SuffixViewModel: ObservableObject {
-    
+
     struct Defaults {
-        static let testText = "Privacy is a fundamental human right. At Apple, it’s also one of our core values. Your devices are important to so many parts of your life. What you share from those experiences, and who you share it with, should be up to you. We design Apple products to protect your privacy and give you control over your information. It’s not always easy. But that’s the kind of innovation we believe in."
+        static let suiteName = "group.Pavel-Sakhanko.HW_1_4_Sakhanko"
+        static var testText = "Privacy is a fundamental human right. At Apple, it’s also one of our core values. Your devices are important to so many parts of your life. What you share from those experiences, and who you share it with, should be up to you. We design Apple products to protect your privacy and give you control over your information. It’s not always easy. But that’s the kind of innovation we believe in."
     }
-    
+
     @Published var allSuffixArrayAsc = [Suffix]()
     @Published var allSuffixArrayDesc = [Suffix]()
     @Published var top3SuffixArray = [Suffix]()
     @Published var top5SuffixArray = [Suffix]()
     @Published var stringSequenseArray = [String]()
 
+    var defaults: UserDefaults? {
+        UserDefaults(suiteName: Defaults.suiteName)
+    }
+
     init() {
-        assignSuffixArray()
+      synchronizeUserDefaults()
+      assignSuffixArray()
+    }
+
+    fileprivate func synchronizeUserDefaults() {
+      defaults?.synchronize()
+    }
+
+    fileprivate func setupSourceText() -> String {
+      let textFromWeb = defaults?.object(forKey: "text") ?? Defaults.testText
+      return textFromWeb as! String
     }
 
     fileprivate func assignSuffixArray() {
-        splitSequence(sequence: Defaults.testText).forEach { sequence in
+        splitSequence(sequence: setupSourceText()).forEach { sequence in
             allSuffixArrayAsc = suffixArray(sequence: sequence, baseSuffixArray: allSuffixArrayAsc)
                 .sorted(by: { $0.title < $1.title })
         }
@@ -37,6 +52,7 @@ class SuffixViewModel: ObservableObject {
                 .filter { $0.title.count == 3 }
                 .prefix(10)
         )
+
         top5SuffixArray = Array(
             allSuffixArrayAsc
                 .filter { $0.title.count == 5 }
