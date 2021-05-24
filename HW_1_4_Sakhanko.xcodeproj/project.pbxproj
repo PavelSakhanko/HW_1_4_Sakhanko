@@ -20,6 +20,19 @@
 		4BAE7FE8261113C000F075B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BAE7FE7261113C000F075B5 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4BCE0FC42635AFAE00EDA3E7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4B53B6EE26354EDB00316A78 /* SuffixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixViewModel.swift; sourceTree = "<group>"; };
 		4B53B6F326354F9A00316A78 /* Suffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suffix.swift; sourceTree = "<group>"; };
@@ -47,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B2C83A3265B6FFA00141932 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE7FE0261113BE00F075B5 /* HW_1_4_SakhankoApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		4B53B6E526354BEC00316A78 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,16 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				4BAE7FE9261113C000F075B5 /* Info.plist */,
-				4BAE7FE0261113BE00F075B5 /* HW_1_4_SakhankoApp.swift */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		4B53B6EA26354D8300316A78 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		4B53B6EB26354D9600316A78 /* Extensions */ = {
@@ -126,12 +139,12 @@
 		4BAE7FDF261113BE00F075B5 /* HW_1_4_Sakhanko */ = {
 			isa = PBXGroup;
 			children = (
+				4B2C83A3265B6FFA00141932 /* App */,
 				4B53B6E626354BF800316A78 /* Model */,
 				4B53B6E526354BEC00316A78 /* View */,
 				4B53B6ED26354E8900316A78 /* ViewModel */,
 				4B53B6E826354C7200316A78 /* Utilities */,
 				4B53B6E726354C4F00316A78 /* Support */,
-				4B53B6EA26354D8300316A78 /* Helpers */,
 				4B53B6EB26354D9600316A78 /* Extensions */,
 				4BAE7FE6261113C000F075B5 /* Preview Content */,
 			);
@@ -156,6 +169,7 @@
 				4BAE7FD9261113BE00F075B5 /* Sources */,
 				4BAE7FDA261113BE00F075B5 /* Frameworks */,
 				4BAE7FDB261113BE00F075B5 /* Resources */,
+				4BCE0FC42635AFAE00EDA3E7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -351,9 +365,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HW_1_4_Sakhanko/HW_1_4_Sakhanko.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HW_1_4_Sakhanko/Preview Content\"";
-				DEVELOPMENT_TEAM = 5NGK57BNWL;
+				DEVELOPMENT_TEAM = YN74M6VZR5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/HW_1_4_Sakhanko/Utilities/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -373,9 +388,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HW_1_4_Sakhanko/HW_1_4_Sakhanko.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HW_1_4_Sakhanko/Preview Content\"";
-				DEVELOPMENT_TEAM = 5NGK57BNWL;
+				DEVELOPMENT_TEAM = YN74M6VZR5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/HW_1_4_Sakhanko/Utilities/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

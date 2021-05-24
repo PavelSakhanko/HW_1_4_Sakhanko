@@ -10,14 +10,13 @@ import Foundation
 class SuffixViewModel: ObservableObject {
     
     struct Defaults {
-        static let testText = "Control transfer statements change the order in which your code is executed, by transferring control from one piece of code to another. Swift has five control transfer statements."
+        static let testText = "Privacy is a fundamental human right. At Apple, it’s also one of our core values. Your devices are important to so many parts of your life. What you share from those experiences, and who you share it with, should be up to you. We design Apple products to protect your privacy and give you control over your information. It’s not always easy. But that’s the kind of innovation we believe in."
     }
     
     @Published var allSuffixArrayAsc = [Suffix]()
     @Published var allSuffixArrayDesc = [Suffix]()
     @Published var top3SuffixArray = [Suffix]()
     @Published var top5SuffixArray = [Suffix]()
-    
     @Published var stringSequenseArray = [String]()
 
     init() {
@@ -36,13 +35,11 @@ class SuffixViewModel: ObservableObject {
         top3SuffixArray = Array(
             allSuffixArrayAsc
                 .filter { $0.title.count == 3 }
-                .sorted(by: { $0.count > $01.count })
                 .prefix(10)
         )
         top5SuffixArray = Array(
             allSuffixArrayAsc
                 .filter { $0.title.count == 5 }
-                .sorted(by: { $0.count > $01.count })
                 .prefix(10)
         )
     }
