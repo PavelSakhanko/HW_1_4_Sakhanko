@@ -20,6 +20,36 @@ struct MainView: View {
     @State private var selection = 0
 
     var body: some View {
+      HStack {
+          TextField("Enter Search Text", text: $suffixViewModel.searchText)
+              .padding(.horizontal, 40)
+              .frame(width: UIScreen.main.bounds.width - 110, height: 45, alignment: .leading)
+              .background(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
+              .clipped()
+              .cornerRadius(10)
+              .overlay(
+                  HStack {
+                      Image(systemName: "magnifyingglass")
+                          .foregroundColor(.white)
+                          .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                          .padding(.leading, 16)
+                  }
+              )
+              .autocapitalization(.none)
+          Spacer()
+              Button(action: {
+                  self.suffixViewModel.searchText = ""
+                  self.hideKeyboard()
+              }) {
+                  Text("Cancel")
+                    .foregroundColor(.white)
+              }
+              .padding(.trailing, 10)
+              .transition(.move(edge: .trailing))
+              .animation(.default)
+       }.padding()
+        .padding(.top, 30)
+
         VStack {
             Picker("", selection: $selection, content: {
                 ForEach(PickerMenu.allCases, id: \.self) {

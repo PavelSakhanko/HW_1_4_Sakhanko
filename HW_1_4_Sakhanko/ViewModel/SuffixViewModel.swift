@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 class SuffixViewModel: ObservableObject {
 
@@ -19,14 +20,47 @@ class SuffixViewModel: ObservableObject {
     @Published var top3SuffixArray = [Suffix]()
     @Published var top5SuffixArray = [Suffix]()
     @Published var stringSequenseArray = [String]()
+    // Search
+    @Published var debouncedText = ""
+    @Published var searchText = ""
+    @Published var bufSuffixArrayAsc = [Suffix]()
+
+    private var subscriptions = Set<AnyCancellable>()
 
     var defaults: UserDefaults? {
         UserDefaults(suiteName: Defaults.suiteName)
     }
 
     init() {
+      setupTextSearching()
       synchronizeUserDefaults()
       assignSuffixArray()
+    }
+
+    fileprivate func setupTextSearching() {
+      $searchText
+        .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
+        .removeDuplicates()
+        .map({ (string) -> String? in
+            if string.count < 1 {
+                self.allSuffixArrayAsc = self.bufSuffixArrayAsc
+                return nil
+            }
+
+            return string
+        })
+        .compactMap{ $0 }
+        .sink(receiveValue: { t in
+            self.debouncedText = t
+            self.allSuffixArrayAsc = self.allSuffixArrayAsc.filter { word in
+              if word.title.count == 0 {
+                return false
+              } else {
+                return word.title.contains(t)
+              }
+            }
+        } )
+        .store(in: &subscriptions)
     }
 
     fileprivate func synchronizeUserDefaults() {
@@ -42,19 +76,20 @@ class SuffixViewModel: ObservableObject {
         splitSequence(sequence: setupSourceText()).forEach { sequence in
             allSuffixArrayAsc = suffixArray(sequence: sequence, baseSuffixArray: allSuffixArrayAsc)
                 .sorted(by: { $0.title < $1.title })
+            bufSuffixArrayAsc = allSuffixArrayAsc
         }
 
-        allSuffixArrayDesc = allSuffixArrayAsc
+        allSuffixArrayDesc = bufSuffixArrayAsc
             .sorted(by: { $0.title > $1.title })
 
         top3SuffixArray = Array(
-            allSuffixArrayAsc
+            bufSuffixArrayAsc
                 .filter { $0.title.count == 3 }
                 .prefix(10)
         )
 
         top5SuffixArray = Array(
-            allSuffixArrayAsc
+            bufSuffixArrayAsc
                 .filter { $0.title.count == 5 }
                 .prefix(10)
         )

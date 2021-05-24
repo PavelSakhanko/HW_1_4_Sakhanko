@@ -10,6 +10,7 @@
 		4B2C83AB265B827400141932 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C83AA265B827400141932 /* ShareViewController.swift */; };
 		4B2C83AE265B827400141932 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C83AC265B827400141932 /* MainInterface.storyboard */; };
 		4B2C83B2265B827400141932 /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4B2C83A8265B827400141932 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4B2C83B9265BA49D00141932 /* View+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C83B8265BA49C00141932 /* View+hideKeyboard.swift */; };
 		4B53B6EF26354EDB00316A78 /* SuffixViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53B6EE26354EDB00316A78 /* SuffixViewModel.swift */; };
 		4B53B6F426354F9A00316A78 /* Suffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53B6F326354F9A00316A78 /* Suffix.swift */; };
 		4B53B6FB263550A500316A78 /* StringSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53B6FA263550A500316A78 /* StringSequence.swift */; };
@@ -54,6 +55,7 @@
 		4B2C83AF265B827400141932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B2C83B6265B846B00141932 /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
 		4B2C83B7265B87B800141932 /* HW_1_4_Sakhanko.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = HW_1_4_Sakhanko.entitlements; sourceTree = "<group>"; };
+		4B2C83B8265BA49C00141932 /* View+hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+hideKeyboard.swift"; sourceTree = "<group>"; };
 		4B53B6EE26354EDB00316A78 /* SuffixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixViewModel.swift; sourceTree = "<group>"; };
 		4B53B6F326354F9A00316A78 /* Suffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suffix.swift; sourceTree = "<group>"; };
 		4B53B6FA263550A500316A78 /* StringSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSequence.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				4B53B71826356D3200316A78 /* CaseIterable+ordinal.swift */,
 				4B53B71C26356FB200316A78 /* StringProtocol+split.swift */,
+				4B2C83B8265BA49C00141932 /* View+hideKeyboard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				4B53B71D26356FB200316A78 /* StringProtocol+split.swift in Sources */,
 				4BAE7FE3261113BE00F075B5 /* MainView.swift in Sources */,
 				4B53B72526357EAC00316A78 /* StringIterator.swift in Sources */,
+				4B2C83B9265BA49D00141932 /* View+hideKeyboard.swift in Sources */,
 				4B53B71626356CF000316A78 /* SuffixListView.swift in Sources */,
 				4B53B71926356D3200316A78 /* CaseIterable+ordinal.swift in Sources */,
 				4B53B6EF26354EDB00316A78 /* SuffixViewModel.swift in Sources */,
