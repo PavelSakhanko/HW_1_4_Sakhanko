@@ -12,6 +12,7 @@ enum PickerMenu: String, CaseIterable {
     case allDesc = "DESC"
     case threeDigit = "3-digit"
     case fiveDigit = "5-digit"
+    case feed = "Feed"
 }
 
 struct MainView: View {
@@ -74,6 +75,8 @@ struct MainView: View {
             array = suffixViewModel.top3SuffixArray
         case 3:
             array = suffixViewModel.top5SuffixArray
+        case 4:
+            array = suffixViewModel.feeds
         default:
             array = [Suffix]()
         }

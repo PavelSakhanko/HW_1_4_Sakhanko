@@ -24,6 +24,8 @@ class SuffixViewModel: ObservableObject {
     @Published var debouncedText = ""
     @Published var searchText = ""
     @Published var bufSuffixArrayAsc = [Suffix]()
+    // Feed
+    @Published var feeds = [Suffix]()
 
     private var subscriptions = Set<AnyCancellable>()
 
@@ -35,6 +37,7 @@ class SuffixViewModel: ObservableObject {
       setupTextSearching()
       synchronizeUserDefaults()
       assignSuffixArray()
+      setupFeedText()
     }
 
     fileprivate func setupTextSearching() {
@@ -67,9 +70,19 @@ class SuffixViewModel: ObservableObject {
       defaults?.synchronize()
     }
 
+    var textArray: [String] {
+      defaults?.array(forKey: "textArray") as? [String] ?? ["Test"]
+    }
+
     fileprivate func setupSourceText() -> String {
-      let textFromWeb = defaults?.object(forKey: "text") ?? Defaults.testText
-      return textFromWeb as! String
+      textArray[textArray.count - 1]
+    }
+
+    fileprivate func setupFeedText() {
+      textArray.forEach { text in
+        let suffix = Suffix(title: text, count: 0)
+        feeds.append(suffix)
+      }
     }
 
     fileprivate func assignSuffixArray() {

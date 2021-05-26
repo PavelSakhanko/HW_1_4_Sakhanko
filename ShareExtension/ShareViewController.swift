@@ -40,7 +40,13 @@ class ShareViewController: SLComposeServiceViewController {
 
     private func save(_ stringData: String) {
         let userDefaults = UserDefaults(suiteName: "group.Pavel-Sakhanko.HW_1_4_Sakhanko")
-        userDefaults?.set(stringData, forKey: "text")
-        userDefaults?.synchronize()
+        var textArray = userDefaults?.stringArray(forKey: "textArray") ?? []
+
+        guard stringData.isEmpty else {
+          textArray.append(stringData)
+          userDefaults?.set(textArray, forKey: "textArray")
+          userDefaults?.synchronize()
+          return
+        }
     }
 }

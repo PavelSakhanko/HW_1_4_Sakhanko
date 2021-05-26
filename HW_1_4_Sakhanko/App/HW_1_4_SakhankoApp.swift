@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct HW_1_4_SakhankoApp: App {
-    var body: some Scene {
-        WindowGroup {
-            MainView()
-        }
-    }
+  var body: some Scene {
+      WindowGroup {
+          MainView()
+      }
+  }
 }

@@ -19,6 +19,7 @@ struct SuffixListView: View {
                         .fontWeight(.semibold)
                     Spacer()
                     Text("\(suffix.count)")
+                      .opacity(suffix.count == 0 ? 0 : 1)
                 }
             }
         }
